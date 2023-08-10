@@ -1,23 +1,19 @@
 import React from "react";
+import "./List.css";
+import { BsFillTrash3Fill } from "react-icons/bs"; // GrCloseCircle ikonunu doğru şekilde import edin
 
-function List() {
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setUserData((prevUserData) => ({
-      ...prevUserData,
-      [name]: value,
-    }));
-  };
-  const loadStoredData = () => {
-    const storedFirstName = localStorage.getItem("firstName");
-    const storedLastName = localStorage.getItem("lastName");
-    const storedAge = localStorage.getItem("age");
+const List = ({ firstName, lastName, age, removeList }) => {
+  return (
+    <div className="list">
+      <BsFillTrash3Fill onClick={removeList} className="close" />
 
-    setFirstName(storedFirstName || ""); // Eğer kayıt yoksa boş string ata
-    setLastName(storedLastName || "");
-    setAge(storedAge || "");
-  };
-  return <div>List</div>;
-}
+      <div className="list-items">
+        <p> Ad: {firstName}</p>
+        <p> Soyad: {lastName}</p>
+        <p> Yaş: {age}</p>
+      </div>
+    </div>
+  );
+};
 
 export default List;

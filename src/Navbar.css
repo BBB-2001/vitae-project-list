@@ -1,0 +1,31 @@
+.shop-button {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.home {
+  color: black;
+  margin-right: 2px;
+}
+.home-button {
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+
+.justify {
+  justify-content: center;
+  text-align: center;
+}
+
+.no-bullets {
+  list-style-type: none; /* Noktalı çizgileri kaldırır */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}

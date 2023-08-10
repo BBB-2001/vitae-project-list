@@ -2,7 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import List from "./List";
+import ListContainer from "./ListContainer";
+
+import { v4 as uuidv4 } from "uuid";
+
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -21,6 +24,7 @@ function App() {
     event.preventDefault();
 
     const newUser = {
+      id: uuidv4(),
       firstName: firstName,
       lastName: lastName,
       age: age,
@@ -46,7 +50,7 @@ function App() {
           <Home handleSubmit={handleSubmit} />
         </Route>
         <Route path="/list">
-          <List />
+          <ListContainer userList={userList} setUserList={setUserList} />
         </Route>
       </Switch>
     </Router>

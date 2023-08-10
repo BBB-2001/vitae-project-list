@@ -1,0 +1,56 @@
+.form-button {
+  border-radius: 10px;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+.send-button {
+  border-radius: 10px;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  cursor: pointer;
+  float: right;
+}
+.age {
+  margin-bottom: 10px;
+}
+.name {
+  margin-bottom: 10px;
+}
+.lastname {
+  margin-bottom: 10px;
+}
+
+.name label {
+  padding-right: 20px;
+}
+
+.age label {
+  padding-right: 20px;
+}
+
+.lastname label {
+  padding-right: 3px;
+}
+
+.lastname input {
+  border-radius: 10px;
+}
+.age input {
+  border-radius: 10px;
+}
+
+.name input {
+  border-radius: 10px;
+}
+.form {
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+}

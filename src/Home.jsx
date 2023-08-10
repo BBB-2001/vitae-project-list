@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import "./Home.css";
 function Home({ handleSubmit }) {
   const [item, setItem] = useState([]);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
@@ -13,10 +14,8 @@ function Home({ handleSubmit }) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Veriyi gönder
     handleSubmit(e, firstName, lastName, age);
 
-    // Input alanlarını temizle
     setFirstName("");
     setLastName("");
     setAge("");
@@ -27,8 +26,8 @@ function Home({ handleSubmit }) {
     return (
       <div>
         <h1>Ad, Soyad ve Yaş Girişi</h1>
-        <form onSubmit={handleFormSubmit}>
-          <div>
+        <form className="form" onSubmit={handleFormSubmit}>
+          <div className="name">
             <label>Ad:</label>
             <input
               type="text"
@@ -37,7 +36,7 @@ function Home({ handleSubmit }) {
               required
             />
           </div>
-          <div>
+          <div className="lastname">
             <label>Soyad:</label>
             <input
               type="text"
@@ -46,7 +45,7 @@ function Home({ handleSubmit }) {
               required
             />
           </div>
-          <div>
+          <div className="age">
             <label>Yaş:</label>
             <input
               type="number"
@@ -55,14 +54,18 @@ function Home({ handleSubmit }) {
               required
             />
           </div>
-          <button type="submit">Gönder</button>
+          <button className="send-button" type="submit">
+            Gönder
+          </button>
         </form>
       </div>
     );
   } else {
     return (
       <div>
-        <button onClick={createForm}>Form Oluştur</button>
+        <button className="form-button" onClick={createForm}>
+          Form Oluştur
+        </button>
       </div>
     );
   }
